@@ -13,7 +13,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val rootLayout = findViewById<android.view.View>(R.id.mainLayout)
         val edtFullName = findViewById<TextInputEditText>(R.id.edtFullName)
         val edtEmail = findViewById<TextInputEditText>(R.id.edtEmail)
         val edtPhone = findViewById<TextInputEditText>(R.id.edtPhone)
@@ -27,5 +26,5 @@ class MainActivity : AppCompatActivity() {
             edtPhone.text?.clear()
             edtAddress.text?.clear()
             edtFullName.requestFocus()
-            Snackbar.make(rootLayout, "Đã xóa trắng form nhập liệu", Snackbar.LENGTH_SHORT).show()
+            Snackbar.make(it, "Đã xóa trắng form nhập liệu", Snackbar.LENGTH_SHORT).show()
         }
